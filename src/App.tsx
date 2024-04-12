@@ -10,7 +10,7 @@ function App() {
   const handleMouseMove = (event :  MouseEventHandler<HTMLDivElement>) => {
     //@ts-expect-error
 
-      setCursorPosition({ top: event.screenY - 90, left: event.screenX - 90 });
+      setCursorPosition({ top: event.screenY - 90, left: event.screenX - 80 });
   }
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function App() {
       <div
         //@ts-ignore
         onMouseMove={handleMouseMove}
-        className={` bg-green-500 pointer-events-none blur-3xl w-48 h-48 rounded-full absolute z-[1000] `}
+        className={` bg-purple-600 pointer-events-none blur-3xl w-36 h-48 rounded-full absolute z-[1000] `}
         style={{position: 'absolute', ...cursorPosition }}
       />
       <div className='bg-[#1e1e1e] w-screen absolute top-0 h-12 flex flex-row items-center justify-between px-16 '>
@@ -44,6 +44,7 @@ function App() {
         </div>
         <div className=' flex flex-1 flex-row w-full translate-y-12 -translate-x-32 items-center justify-center'>
           <img className='w-96 h-auto hover:scale-110 transition-all ease-linear duration-300 ' src="/social.png" alt="social" />
+          {/* <img className='w-full h-full absolute top-30 -right-10' src="/cool.png" alt="social" /> */}
         </div>
           
       </section>
